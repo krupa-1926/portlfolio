@@ -86,7 +86,7 @@ I enjoy solving backend problems, designing APIs, and building real-time systems
               Tech: React, Node.js, Socket.IO, MongoDB
             </p>
             <div className="flex gap-4 mt-4">
-              <a href="#" className="text-indigo-400 hover:underline">GitHub</a>
+              <a href="https://github.com/krupa-1926/Meetify-Real_Time_App.git" className="text-indigo-400 hover:underline">GitHub</a>
                <a href="https://zoomappfrontend.vercel.app/" className="text-indigo-400 hover:underline">Live Demo</a>
             </div>
           </div><hr className="border-gray-800 my-12" />
