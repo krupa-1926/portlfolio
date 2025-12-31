@@ -7,7 +7,7 @@ export default function Portfolio() {
       {/* Hero Section */}
       <section className="max-w-5xl mx-auto px-6 py-20">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          <span className="text-indigo-400">Krupa Patel - Software Development Engineer Portfolio</span>
+          <span className="text-indigo-400">Krupa Patel <h3>- Software Development Engineer Portfolio</h3></span>
         </h1>
         <p className="text-lg text-gray-400 max-w-2xl">
           I am a Full-Stack Developer with strong experience in building
