@@ -74,8 +74,8 @@ export default function Header() {
 
       {/* Social Icons */}
       <div className="flex gap-6 text-slate-400">
-        <a href="https://github.com/krupapatel" target="_blank"><Github size={22} /></a>
-        <a href="https://linkedin.com/in/krupapatel" target="_blank"><Linkedin size={22} /></a>
+        <a href="https://github.com/krupa-1926" target="_blank"><Github size={22} /></a>
+        <a href="https://www.linkedin.com/in/krupa1926/" target="_blank"><Linkedin size={22} /></a>
         <a href="mailto:krupapatel1926@gmail.com"><Mail size={22} /></a>
       </div>
     </header>
