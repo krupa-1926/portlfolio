@@ -1,32 +1,70 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import { useEffect, useState } from "react";
+
+const sections = ["about", "experience", "projects"];
 
 export default function Header() {
-  return (
-    // <header className="lg:sticky lg:top-0 lg:w-1/2 lg:h-screen lg:py-24 flex flex-col justify-between">
-        <header className="hidden lg:flex fixed top-0 left-0 h-screen w-1/2 max-w-[50%] px-24 py-24 flex-col justify-between">
+  const [active, setActive] = useState("about");
 
+  useEffect(() => {
+    const observers = [];
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      if (!element) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActive(section);
+          }
+        },
+        {
+          rootMargin: "-40% 0px -40% 0px",
+        }
+      );
+
+      observer.observe(element);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((observer) => observer.disconnect());
+  }, []);
+
+  return (
+    <header className="hidden lg:flex fixed top-0 left-0 h-screen w-[40%] px-24 py-24 flex-col justify-between">
       
-      {/* Top Section */}
+      {/* Intro */}
       <div>
         <h1 className="text-4xl font-bold text-slate-200">Krupa Patel</h1>
         <h2 className="mt-3 text-xl text-slate-200">Software Developer</h2>
 
-        <p className="mt-4 max-w-xs text-slate-400">
+        <p className="mt-4 text-slate-400 max-w-xs">
           I build robust, high-performance web applications, specializing in the
           MERN stack and secure backend architectures.
         </p>
 
         {/* Navigation */}
-        <nav className="hidden lg:block mt-16 uppercase text-xs font-bold tracking-widest">
+        <nav className="mt-12 uppercase text-xs font-bold tracking-widest">
           <ul className="space-y-6">
-            {["About", "Experience", "Projects"].map((item) => (
-              <li key={item}>
+            {sections.map((section) => (
+              <li key={section}>
                 <a
-                  href={`#${item.toLowerCase()}`}
-                  className="group flex items-center text-slate-400 hover:text-slate-200 transition"
+                  href={`#${section}`}
+                  className={`group flex items-center transition ${
+                    active === section
+                      ? "text-slate-200"
+                      : "text-slate-400 hover:text-slate-200"
+                  }`}
                 >
-                  <span className="h-px w-8 bg-slate-600 mr-4 group-hover:w-16 transition-all" />
-                  <span>{item}</span>
+                  <span
+                    className={`h-px mr-4 transition-all ${
+                      active === section
+                        ? "w-16 bg-teal-300"
+                        : "w-8 bg-slate-600 group-hover:w-16"
+                    }`}
+                  />
+                  {section}
                 </a>
               </li>
             ))}
@@ -36,31 +74,11 @@ export default function Header() {
 
       {/* Social Icons */}
       <div className="flex gap-6 text-slate-400">
-        <a
-          href="https://github.com/krupapatel"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-teal-300 transition"
-        >
-          <Github size={22} />
-        </a>
-
-        <a
-          href="https://linkedin.com/in/krupapatel"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-teal-300 transition"
-        >
-          <Linkedin size={22} />
-        </a>
-
-        <a
-          href="mailto:krupapatel1926@gmail.com"
-          className="hover:text-teal-300 transition"
-        >
-          <Mail size={22} />
-        </a>
+        <a href="https://github.com/krupapatel" target="_blank"><Github size={22} /></a>
+        <a href="https://linkedin.com/in/krupapatel" target="_blank"><Linkedin size={22} /></a>
+        <a href="mailto:krupapatel1926@gmail.com"><Mail size={22} /></a>
       </div>
     </header>
   );
 }
+

@@ -21,7 +21,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="space-y-12">
+    <section id="experience" className="space-y-12 scroll-mt-24">
       {experiences.map((exp, i) => (
         <div key={i} className="p-4 rounded-xl hover:bg-slate-800/40">
           <p className="text-xs text-slate-500">{exp.time}</p>

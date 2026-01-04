@@ -33,7 +33,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="space-y-8">
+    <section id="projects" className="space-y-8 scroll-mt-24">
       {projects.map((p) => (
         <div key={p.title} className="p-4 rounded-xl hover:bg-slate-800/40">
           <h4 className="text-slate-200">{p.title}</h4>
