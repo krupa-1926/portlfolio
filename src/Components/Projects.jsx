@@ -51,8 +51,11 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="space-y-8 scroll-mt-24">
-      <h1 className="text-2xl">Projects</h1>
-
+      {/* <h1 className="text-2xl">Projects</h1> */}
+<h2 className="flex items-center gap-4 text-2xl font-bold text-slate-300">
+Projects
+<span className="flex-1 h-px bg-slate-700"></span>
+</h2>
       {projects.map((p) => (
         <div
           key={p.title}
