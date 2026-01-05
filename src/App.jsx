@@ -12,7 +12,7 @@ export default function App() {
 
       <Header />
       <main className="lg:ml-[40%] max-w-3xl px-6 lg:px-24 py-24 space-y-24">
-        <About />
+        {/* <About /> */}
         <Experience />
         <Projects />
         <Footer />

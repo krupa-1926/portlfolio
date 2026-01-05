@@ -1,7 +1,8 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const sections = ["about", "experience", "projects"];
+// const sections = ["about", "experience", "projects"];
+const sections = [ "experience", "projects"];
 
 export default function Header() {
   const [active, setActive] = useState("about");
