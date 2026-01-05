@@ -33,8 +33,19 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="hidden lg:flex fixed top-0 left-0 h-screen w-[40%] px-24 py-24 flex-col justify-between">
-      
+<header
+  className="
+    relative
+    lg:fixed
+    lg:top-0 lg:left-0
+    w-full lg:w-[40%]
+     min-h-[370px] lg:min-h-screen
+    px-3 sm:px-12 lg:px-24
+    py-16 lg:py-24
+    flex flex-col justify-between
+  "
+>
+
       {/* Intro */}
       <div>
         <h1 className="text-4xl font-bold text-slate-200">Krupa Patel</h1>
@@ -46,7 +57,7 @@ export default function Header() {
         </p>
 
         {/* Navigation */}
-        <nav className="mt-12 uppercase text-xs font-bold tracking-widest">
+        <nav className="hidden lg:block mt-12 uppercase text-xs font-bold tracking-widest">
           <ul className="space-y-6">
             {sections.map((section) => (
               <li key={section}>
@@ -82,4 +93,3 @@ export default function Header() {
     </header>
   );
 }
-

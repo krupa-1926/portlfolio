@@ -22,7 +22,16 @@ const experiences = [
 export default function Experience() {
   return (
     <section id="experience" className="space-y-12 scroll-mt-24">
-    <h2 className="flex items-center gap-4 text-2xl font-bold text-slate-300">
+    {/* <h2 className="flex items-center gap-4 text-2xl font-bold text-slate-300"> */}
+    <h2 className="
+  sticky top-0 lg:static
+   
+  backdrop-blur
+  z-10
+  py-2
+  flex items-center gap-4
+  text-2xl font-bold text-slate-300
+">
 Experiences
 <span className="flex-1 h-px bg-slate-700"></span>
 </h2>

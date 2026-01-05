@@ -51,61 +51,69 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="space-y-20 scroll-mt-24">
-      <h2 className="flex items-center gap-4 text-2xl font-bold text-slate-300">
+      {/* <h2 className="flex items-center gap-4 text-2xl font-bold text-slate-300"> */}
+        <h2 className="
+  sticky top-0 lg:static
+  backdrop-blur
+  z-10
+  py-2
+  flex items-center gap-4
+  text-2xl font-bold text-slate-300
+">
         Projects
         <span className="flex-1 h-px bg-slate-700"></span>
       </h2>
       {projects.map((p) => (
-        <div
-          key={p.title}
-          className="group relative grid grid-cols-12 gap-4 p-4 rounded-xl hover:bg-slate-800/40 transition"
+        <a
+          href={p.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-fit"
         >
-          {/* LEFT: IMAGE (like date column) */}
-          <div className="col-span-12 sm:col-span-3 mt-1">
-            <a
-              href={p.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-fit"
-            >
+          <div
+            key={p.title}
+            className="group relative grid grid-cols-12 gap-4 p-4 rounded-xl hover:bg-slate-800/40 transition"
+          >
+            {/* LEFT: IMAGE (like date column) */}
+            <div className="col-span-12 sm:col-span-3 mt-1">
               <img
                 src={p.image}
                 alt={p.title}
                 className="w-40 h-28 rounded-lg object-cover bg-slate-800 border border-slate-700"
               />
-            </a>
-          </div>
+            </div>
 
-          {/* RIGHT: CONTENT */}
-          <div className="col-span-12 sm:col-span-9">
-            <h4 className="text-slate-200 text-lg font-medium group-hover:text-teal-300 transition">
-              <a
-                href={p.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2"
-              >
-                {p.title}
-                <span className="text-sm opacity-0 group-hover:opacity-100 transition">
-                  ↗
-                </span>
-              </a>
-            </h4>
+            {/* RIGHT: CONTENT */}
+            <div className="col-span-12 sm:col-span-9">
+              <h4 className="text-slate-200 text-lg font-medium group-hover:text-teal-300 transition">
+                {/* <a
+                  href={p.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2"
+                > */}
+                  {p.title} 
+                  <span className="text-sm opacity-0 group-hover:opacity-100 transition">
+                    ↗
+                  </span>
+                {/* </a> */}
+              </h4>
 
-            <p className="text-sm mt-2 text-slate-400">{p.desc}</p>
+              <p className="text-sm mt-2 text-slate-400">{p.desc}</p>
 
-            <div className="flex flex-wrap gap-2 mt-4">
-              {p.tech.map((t) => (
-                <span
-                  key={t}
-                  className="px-3 py-1 text-xs rounded-full bg-teal-400/10 text-teal-300"
-                >
-                  {t}
-                </span>
-              ))}
+              <div className="flex flex-wrap gap-2 mt-4">
+                {p.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="px-3 py-1 text-xs rounded-full bg-teal-400/10 text-teal-300"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       ))}
     </section>
   );
