@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
+import  profile from '../images/profile.jpeg'
 
 // const sections = ["about", "experience", "projects"];
 const sections = [ "experience", "projects"];
@@ -48,6 +49,10 @@ export default function Header() {
 
       {/* Intro */}
       <div>
+        <img
+                src={profile}
+                className="w-full h-full lg:w-40 lg:h-28 rounded-lg object-cover bg-slate-800 border border-slate-700 mb-3"
+              />
         <h1 className="text-4xl font-bold text-slate-200">Krupa Patel</h1>
         <h2 className="mt-3 text-xl text-slate-200">Software Developer</h2>
 
@@ -85,7 +90,7 @@ export default function Header() {
       </div>
 
       {/* Social Icons */}
-      <div className="flex gap-6 text-slate-400">
+      <div className="flex gap-6 text-slate-400 mt-10">
         <a href="https://github.com/krupa-1926" target="_blank"><Github size={22} /></a>
         <a href="https://www.linkedin.com/in/krupa1926/" target="_blank"><Linkedin size={22} /></a>
         <a href="mailto:krupapatel1926@gmail.com"><Mail size={22} /></a>
