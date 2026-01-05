@@ -79,7 +79,7 @@ export default function Projects() {
               <img
                 src={p.image}
                 alt={p.title}
-                className="w-40 h-28 rounded-lg object-cover bg-slate-800 border border-slate-700"
+                className="w-[50%] h-[100%] lg:w-40 lg:h-28 rounded-lg object-cover bg-slate-800 border border-slate-700"
               />
             </div>
 
