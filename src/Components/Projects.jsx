@@ -50,12 +50,11 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="space-y-8 scroll-mt-24">
-      {/* <h1 className="text-2xl">Projects</h1> */}
-<h2 className="flex items-center gap-4 text-2xl font-bold text-slate-300">
-Projects
-<span className="flex-1 h-px bg-slate-700"></span>
-</h2>
+    <section id="projects" className="space-y-20 scroll-mt-24">
+      <h2 className="flex items-center gap-4 text-2xl font-bold text-slate-300">
+        Projects
+        <span className="flex-1 h-px bg-slate-700"></span>
+      </h2>
       {projects.map((p) => (
         <div
           key={p.title}
@@ -63,12 +62,18 @@ Projects
         >
           {/* LEFT: IMAGE (like date column) */}
           <div className="col-span-12 sm:col-span-3 mt-1">
-            <img
-              src={p.image}
-              alt={p.title}
-              // className="w-16 h-16 rounded-lg object-cover bg-slate-800 border border-slate-700"
-                className="w-40 h-16 sm:w-32 sm:h-32 rounded-xl object-cover bg-slate-800 border border-slate-700"
-            />
+            <a
+              href={p.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-fit"
+            >
+              <img
+                src={p.image}
+                alt={p.title}
+                className="w-40 h-28 rounded-lg object-cover bg-slate-800 border border-slate-700"
+              />
+            </a>
           </div>
 
           {/* RIGHT: CONTENT */}

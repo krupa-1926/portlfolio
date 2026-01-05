@@ -22,7 +22,10 @@ const experiences = [
 export default function Experience() {
   return (
     <section id="experience" className="space-y-12 scroll-mt-24">
-      <h1 className="text-2xl">Experience</h1>
+    <h2 className="flex items-center gap-4 text-2xl font-bold text-slate-300">
+Experiences
+<span className="flex-1 h-px bg-slate-700"></span>
+</h2>
       {experiences.map((exp, i) => (
   <div
     key={i}

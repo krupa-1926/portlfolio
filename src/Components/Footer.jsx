@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="mt-24 pt-12">
-      <p className="text-sm text-left mt-2">
+    <footer className="pb-16" >
+      <p className="text-sm text-left">
         Built and deployed by Krupa Patel.
       </p>
     </footer>
