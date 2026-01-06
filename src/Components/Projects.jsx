@@ -51,15 +51,17 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="space-y-20 scroll-mt-24">
-      {/* <h2 className="flex items-center gap-4 text-2xl font-bold text-slate-300"> */}
-        <h2 className="
-  sticky top-0 lg:static
-  backdrop-blur
-  z-10
-  py-2
-  flex items-center gap-4
-  text-2xl font-bold text-slate-300
-">
+      <h4 className="text-slate-200 text-lg font-medium hover:text-teal-300 transition ">
+        <a
+          href="https://docs.google.com/document/d/1AgZqmIM1msGqhax2lrBBdOET1wupUEUeaNMYbZv-Wow/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-fit"
+        >
+        View full resume ↗
+        </a>
+      </h4>
+      <h2 className=" sticky top-0 lg:static backdrop-blur z-10 py-2 flex items-center gap-4 text-2xl font-bold text-slate-300">
         Projects
         <span className="flex-1 h-px bg-slate-700"></span>
       </h2>
@@ -86,17 +88,10 @@ export default function Projects() {
             {/* RIGHT: CONTENT */}
             <div className="col-span-12 sm:col-span-9">
               <h4 className="text-slate-200 text-lg font-medium group-hover:text-teal-300 transition">
-                {/* <a
-                  href={p.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2"
-                > */}
-                  {p.title} 
-                  <span className="text-sm opacity-0 group-hover:opacity-100 transition">
-                    ↗
-                  </span>
-                {/* </a> */}
+                {p.title}
+                <span className="text-sm opacity-0 group-hover:opacity-100 transition">
+                  ↗
+                </span>
               </h4>
 
               <p className="text-sm mt-2 text-slate-400">{p.desc}</p>

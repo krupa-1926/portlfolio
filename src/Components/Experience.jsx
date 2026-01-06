@@ -3,74 +3,65 @@ const experiences = [
     time: "JAN — APR 2024",
     role: "Software Intern · Grownited Pvt Ltd",
     desc: "Developed a local services platform to manage city-level service categories.Designed modular service structures covering transport, healthcare, and utility services.Implemented frontend components and backend APIs to support scalable service operations.Worked on optimizing data flow between frontend and backend for improved responsiveness.",
-    tech: ["MongoDB", "Express", "React", "Node" , "Bootstrap"]
+    tech: ["MongoDB", "Express", "React", "Node", "Bootstrap"],
   },
   {
     time: "JUL — AUG 2023",
     role: "Software Intern · Sparks To Ideas",
     desc: "Built a mobile-first shopping website (PhoneX) for browsing phone products and accessories.Implemented reusable UI components to improve consistency and maintainability. Focused on delivering a smooth and user-friendly interface for product discovery and navigation.Collaborated with mentors to understand frontend best practices and component-based design.",
-    tech: ["MongoDB", "Express", "React", "Node"]
+    tech: ["MongoDB", "Express", "React", "Node"],
   },
   {
     time: "JAN — FEB 2023",
     role: "Software Intern · Praxeware Technologies",
     desc: "Implemented features such as post creation, image uploads, and content management. Built admin-level access to manage, update, and delete user-generated content. Gained hands-on experience with backend development and MVC architecture.",
-    tech: [ "HTML" , "CSS" , "Django" ,"Python"]
+    tech: ["HTML", "CSS", "Django", "Python"],
   },
-]
+];
 
 export default function Experience() {
   return (
     <section id="experience" className="space-y-12 scroll-mt-24">
-    {/* <h2 className="flex items-center gap-4 text-2xl font-bold text-slate-300"> */}
-    <h2 className="
-  sticky top-0 lg:static
-   
-  backdrop-blur
-  z-10
-  py-2
-  flex items-center gap-4
-  text-2xl font-bold text-slate-300
-">
-Experiences
-<span className="flex-1 h-px bg-slate-700"></span>
-</h2>
+      <h2 className="sticky top-0 lg:static  backdrop-blur z-10 py-2 flex items-center gap-4 text-2xl font-bold text-slate-300">
+        Experiences
+        <span className="flex-1 h-px bg-slate-700"></span>
+      </h2>
       {experiences.map((exp, i) => (
-  <div
-    key={i}
-    className="group relative grid grid-cols-12 gap-4 p-4 rounded-xl hover:bg-slate-800/40 transition "
-  >
-    {/* Date Column */}
-    <div className="col-span-12 sm:col-span-3 mt-1">
-      <p className="text-[0.7rem] font-bold uppercase tracking-widest text-slate-500">
-        {exp.time}
-      </p>
-    </div>
+        <div
+          key={i}
+          className="group relative grid grid-cols-12 gap-4 p-4 rounded-xl hover:bg-slate-800/40 transition "
+        >
+          {/* Date Column */}
+          <div className="col-span-12 sm:col-span-3 mt-1">
+            <p className="text-[0.7rem] font-bold uppercase tracking-widest text-slate-500">
+              {exp.time}
+            </p>
+          </div>
 
-    {/* Content Column */}
-    <div className="col-span-12 sm:col-span-9">
-      <h4 className="text-slate-200 font-medium text-lg group-hover:text-teal-300 transition">
-        {exp.role}
-      </h4>
+          {/* Content Column */}
+          <div className="col-span-12 sm:col-span-9">
+            <h4 className="text-slate-200 font-medium text-lg group-hover:text-teal-300 transition">
+              {exp.role}
+            </h4>
 
-      <p className="text-sm mt-2 text-slate-400 leading-relaxed">
-        {exp.desc}
-      </p>
+            <p className="text-sm mt-2 text-slate-400 leading-relaxed">
+              {exp.desc}
+            </p>
 
-      <div className="flex flex-wrap gap-2 mt-4">
-        {exp.tech.map((t) => (
-          <span
-            key={t}
-            className="px-3 py-1 text-xs rounded-full bg-teal-400/10 text-teal-300"
-          >
-            {t}
-          </span>
-        ))}
-      </div>
-    </div>
-  </div>
-))}
-
+            <div className="flex flex-wrap gap-2 mt-4">
+              {exp.tech.map((t) => (
+                <span
+                  key={t}
+                  className="px-3 py-1 text-xs rounded-full bg-teal-400/10 text-teal-300"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+     
     </section>
-  )
+  );
 }
